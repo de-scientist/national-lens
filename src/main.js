@@ -23,7 +23,6 @@ async function fetchNationality(inputValue) {
     const feedback = await fetch(`https://api.nationalize.io/?name=${inputValue}`);
     const data = await feedback.json();
 
-    
     if (data.country && data.country.length > 0) {
       // Get the top country prediction
       const topCountry = data.country[0];
