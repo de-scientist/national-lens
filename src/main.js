@@ -15,3 +15,18 @@ btn.addEventListener("click", async (ev) => {
   }
 
 })
+
+
+async function fetchNationality() {
+  try {
+    const feedback = await fetch ("https://api.nationalize.io/?")
+    const data = await feedback.json();
+    result.innerHTML= (`<strong>${lname}</strong> is from <strong>${country}</strong> with <strong> ${percentage * 100} </strong> certainty`);
+    
+  } catch (error) {
+    
+  } finally {
+
+  }
+}
+  
